@@ -5,7 +5,8 @@ Cordoba APP Studio
 - [Setup](#setup)
 - [Knowledge](#knowledge)
 - [Software Component ARXML Elements](#software-component-arxml-elements)
-- [About](#About Cordoba APP Studio)
+- [About Cordoba APP Studio](#About-Cordoba-APP-Studio)
+- [Provided APP Updates](#Provided-APP-Updates)
 
 ## Intro
 
@@ -24,6 +25,7 @@ AUTOSAR Studio will try to extract the following information:
   <img  width="700" height="500" src="./images/Block.png">
 </p>
 <h4 align="center">Block Diagram Describes the Different Phases of integration with Autosar Studio with RTE Tool</h4>
+
 ## Setup
 
 Clone this repository on your machine.
@@ -234,5 +236,49 @@ Run start command to run the application:
 ## About Cordoba APP Studio
 
 Cordoba APP Studio is The Last updated version of AUTOSAR Studio (Release 4.0)
+
+<p align="center">
+  <img  width="700" height="500" src="./images/autosar1.PNG">
+</p>
+<h4 align="center">Cordoba APP Studio</h4>
+
+## Provided APP Updates
+
+### Software Component
+
+- Allows more SWC types Service SWC type, Complex Device Driver SWC type besides the Application SWC type.
+
+### Data-Types
+
+- Provides Implementation Data-Types as a reference for Data-Types.
+- Implementation Data-Types as Structure , Array and Value.
+- Every Element in Implementation Data-Types can either maps to Basic Software Data-Type or Implementation Data-Type.
+
+### Port Interfaces
+
+#### -Sender Receiver Port Interface 
+- This element describes a sender/receiver interface that declares many data elements to be sent and received.
+- The Data Element describes the variables associated with each interface. 
+- Data Elements in the latest Release can only be Implementation Data-Type .
+#### -Client Server Port Interface 
+- This element describes a Client/Server interface that declares many Operations to be invoked and handled.
+- Each Operation can have Arguments either input , output or input/output. 
+- Arguments in the latest Release can only be Implementation Data-Type .
+
+### Ports
+
+#### -R-Port Prototype
+- This element describes a Requester Port and it’s linked to an Interface.
+#### -P-Port Prototype
+- This element describes a Provider Port and it’s linked to an Interface.
+
+### Internal Behavior
+
+#### -Runnable
+- Runnables are the callable function that are Triggered by certain events. These functions are the actual implementation for the functionalities of the SWC.
+#### -Events
+- This element describes an action that Trigger some functionalities.
+- Events Trigger can be Init Event, Timing Event (S/R) interface, On Operation Invoked in (C/S) interface.   
+
 
 
