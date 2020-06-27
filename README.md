@@ -1,4 +1,4 @@
-AUTOSAR Studio Desktop Application
+Cordoba APP Studio
 ====================
 ## Table of Contents
 - [Intro](#intro)
@@ -10,25 +10,25 @@ AUTOSAR Studio Desktop Application
 
 ## Intro
 
-<h4 align="center">An educational tool for AUTOSAR to help junior embedded enigneers with learning AUTOSAR </h4>
-AUTOSAR Studio Project is written with Web Technologies (HTML,CSS,JavaScript) and also electron framework to make it as Desktop Application
+<h4 align="center">An open source educational tool for AUTOSAR Software components Design </h4>
+Cordoba APP Studio Project is written with Web Technologies (HTML,CSS,JavaScript) and also electron framework to make it as Desktop Application
 
 The aim of the software is to
 Design Software Components Model and Change it to ARXML files (SWCs.ARXML ,DataTypeAndInterface.ARXML)
 
 AUTOSAR Studio will try to extract the following information:
 
--  Software Components Standard Tags (AUTOSAR Release 4.3.0)
--  Composition DataTypeAndInterface Tags (AUTOSAR Release 4.3.0)
+-  Software Components Standard Tags (AUTOSAR Release 4.3.1)
+-  Composition DataTypeAndInterface Tags (AUTOSAR Release 4.3.1)
 
 ## Setup
 
 Clone this repository on your machine.
 
-    git clone https://github.com/MinaMourice/AsuSAR-Stack-19.git
+    git clone https://github.com/mAbdelhay/Autosar_Studio.git
 Open your terminal and navigate to the repo's directory.
 
-    cd AsuSAR-Stack-19/AsuSAR-Stack-19
+    cd ./Autosar_Studio
 Run electron installation command:    
     
     npm install --save-dev electron
@@ -115,7 +115,7 @@ Run start command to run the application:
                     </SWC-IMPLEMENTATION>
                  </ELEMENTS>
             </AR-PACKAGE>
-- Application Software Component
+- Software Component (Application - Service - Complex Device Drived)
 
     - This element describes the software component and its ports.
         
@@ -128,6 +128,30 @@ Run start command to run the application:
                     .......
                 </INTERNAL-BEHAVIORS>
             </APPLICATION-SW-COMPONENT-TYPE>
+            
+            or 
+            
+            <SERVICE-SW-COMPONENT-TYPE>
+                <SHORT-NAME>SWC_Name</SHORT-NAME>
+                <PORTS>
+                    .......
+                </PORTS>
+                <INTERNAL-BEHAVIORS>
+                    .......
+                </INTERNAL-BEHAVIORS>
+            </SERVICE-SW-COMPONENT-TYPE>
+            
+            or
+            
+            <COMPLEX-DEVICE-DRIVE-SW-COMPONENT-TYPE>
+                <SHORT-NAME>SWC_Name</SHORT-NAME>
+                <PORTS>
+                    .......
+                </PORTS>
+                <INTERNAL-BEHAVIORS>
+                    .......
+                </INTERNAL-BEHAVIORS>
+            </COMPLEX-DEVICE-DRIVE-SW-COMPONENT-TYPE>
             
     - Ports Types
         
@@ -202,16 +226,5 @@ Run start command to run the application:
                         <SERVER-CALL-POINTS>
                         </SERVER-CALL-POINTS>
                     </RUNNABLE-ENTITY>
-## ToDo
 
-Frontend
-* [x] Make Intropage.
-* [x] Make Drawing Block.
-* [x] Enter Data Type and Interfaces.
-* [x] Add more UI Features.
-* [x] Software Component Properties
 
-Backend
-* [x] Generate basic ARXML Prototype.
-* [x] Generate SWCs.ARXML Files as Autosar standard.
-* [x] Generate DataTypeAndInterface.ARXML Files as Autosar standard.
